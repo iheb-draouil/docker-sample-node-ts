@@ -40,5 +40,9 @@ WORKDIR /
 # Cela supprime le répertoire "/var/setup"
 RUN rm -Rf /var/setup
 
+# Cette ligne ne fait rien. Il indique simplement aux personnes qui utiliseront plus tard cette image que le port sur lequel le serveur écoutera est "8080"
+# Ceci est purement pour la documentation
+EXPOSE 8080
+
 # Lorsqu'un conteneur est créé à partir de cette image, cela démarrera le serveur
 ENTRYPOINT ["/usr/local/bin/node", "/var/www/index.js"]
